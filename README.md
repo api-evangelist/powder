@@ -42,6 +42,24 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Powder is a company surfaced as a portfolio company of serena and added to the API Evangelist network as a stub for enrichment. Sector: gaming. This profile is a lead awaiting the enrichment pipeline.
+Powder was a Paris-based gaming company (founded 2018, $14M Series A led by Serena) that built
+AI-powered clipping software for gamers and content creators — a low-resource Windows screen
+recorder plus on-device machine learning that turned gameplay recordings and long Twitch, YouTube
+and Kick streams into short vertical clips, AutoEdits and automontages, with per-title models for
+40-plus games.
 
-Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://powder.gg/
+**No public API surface.** Powder was distributed only as an end-user Windows desktop application
+(Steam, Microsoft Store, Razer Cortex). It published no public API, developer portal, SDK, webhook
+catalogue or machine-readable contract that this profile could find.
+
+**Discontinued.** The apex host `powder.gg` now 301-redirects every path — including
+`/openapi.json` and every `/.well-known/` path — to a first-party notice from the Powder team
+stating that "the Powder app will no longer be updated or maintained" and that all subscriptions
+have been cancelled. The notice is saved verbatim at
+[`lifecycle/powder-end-of-life-notice.txt`](lifecycle/powder-end-of-life-notice.txt) and the
+lifecycle record, with the probe evidence, is at
+[`lifecycle/powder-lifecycle.yml`](lifecycle/powder-lifecycle.yml). The `www.powder.gg` marketing
+site is still live but stale — it continues to advertise a subscription the notice says was
+cancelled.
+
+Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.powder.gg/

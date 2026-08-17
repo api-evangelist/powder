@@ -1,0 +1,60 @@
+generated: '2026-08-17'
+method: searched
+source: https://docs.google.com/document/d/1p8TjN7bCRdOnhrD5DjG02pmoGi4ylsGKmdCS-YV4jrg/edit
+product_status: discontinued
+end_of_life:
+  announced_by: Powder team (first-party)
+  notice_url: https://docs.google.com/document/d/1p8TjN7bCRdOnhrD5DjG02pmoGi4ylsGKmdCS-YV4jrg/edit
+  notice_file: powder-end-of-life-notice.txt
+  discovery: >-
+    Found by probing the apex host. https://powder.gg/ serves an nginx rule that
+    301-redirects every path to this document; the notice is therefore what the
+    company's own domain returns for any URL other than the www marketing site.
+  quote: >-
+    "After 7 incredible years together, our journey with Powder has reached its end.
+    We've stretched our financial capacities as far as possible, but we can no longer
+    sustain the app. Starting today, the Powder app will no longer be updated or
+    maintained. All active subscriptions are being cancelled so they won't renew."
+  effects:
+    - app no longer updated or maintained
+    - all active subscriptions cancelled, no renewal
+    - partial refunds attempted for yearly plans, not guaranteed
+  date_stated_in_notice: null
+  date_note: >-
+    The notice is undated and says only "starting today", so no shutdown date can be
+    recorded. Probed 2026-08-17 and already live. Recorded as null rather than guessed.
+api_surface: none
+api_surface_note: >-
+  Powder shipped a consumer Windows desktop application (distributed via Steam, the
+  Microsoft Store and Razer Cortex) with no public API, developer portal, SDK, webhook
+  catalogue or machine-readable contract at any point discoverable in this pass. There
+  is therefore no API versioning policy, deprecation policy, Sunset/Deprecation header
+  support or SLA to record.
+versioning: null
+deprecation: null
+sla: null
+status_page: null
+deprecated_operations: []
+residual_surfaces:
+- url: https://www.powder.gg/
+  status: 200
+  note: >-
+    Marketing site still live and unretired — still advertises the free tier and the
+    $9.99/mo Powder Pro subscription that the wind-down notice says has been cancelled.
+    Treated as stale content, not as an active commercial offer.
+- url: https://powderapp.notion.site/POWDER-T-C-fb5f1576921f4ec9a7fb9d243786ace3
+  status: 200
+  note: combined Terms & Conditions / Privacy Policy, still served
+- url: https://powderapp.medium.com/
+  status: 200
+  note: blog; most recent post 2023-01-17. powder.gg/blog/ now 301s to the wind-down notice.
+evidence:
+- url: https://powder.gg/openapi.json
+  status: 301
+  note: 301 -> the wind-down notice; the apex redirects all paths there
+- url: https://docs.google.com/document/d/1p8TjN7bCRdOnhrD5DjG02pmoGi4ylsGKmdCS-YV4jrg/export?format=txt
+  status: 200
+  note: verbatim notice text, saved to powder-end-of-life-notice.txt
+- url: https://www.powder.gg/pro
+  status: 200
+  note: stale pricing page (Free $0 / Pro $9.99 per month)

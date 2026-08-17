@@ -1,0 +1,55 @@
+generated: '2026-08-17'
+method: probed
+source: live HTTP probes of the powder.gg hosts named in apis.yml
+host: https://www.powder.gg
+note: >-
+  Every /.well-known/ path probed on the Powder hosts returned a miss. On
+  www.powder.gg (the Next.js marketing site) each path answers HTTP 404 with the
+  site's HTML shell. On the apex host powder.gg an nginx rule 301-redirects EVERY
+  path — including every /.well-known/ path — to Powder's public wind-down notice
+  on Google Docs, so the apex serves no discovery documents either. No WellKnown
+  or SecurityTxt pointer is emitted from this probe: this file records an absence,
+  not a presence.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+- path: /llms.txt
+  status: 404
+- path: /openapi.json
+  status: 404
+- path: /swagger.json
+  status: 404
+- path: /robots.txt
+  status: 200
+  note: served, but robots.txt is not a /.well-known discovery document
+- path: /sitemap.xml
+  status: 200
+  note: served; 58 marketing/game-model URLs, no developer or API paths
+additional_hosts:
+- host: https://powder.gg
+  result: >-
+    All paths 301 -> https://docs.google.com/document/d/1p8TjN7bCRdOnhrD5DjG02pmoGi4ylsGKmdCS-YV4jrg/edit
+    (the Powder wind-down notice). Probed /.well-known/security.txt,
+    /.well-known/agent-card.json, /.well-known/agent.json, /llms.txt and
+    /openapi.json — every one 301, none a document.
+historical_hosts:
+- host: sdk.powder.gg
+  status: NXDOMAIN
+  source: https://api.certspotter.com/v1/issuances?domain=powder.gg&include_subdomains=true
+  note: >-
+    Certificate Transparency shows Powder once operated sdk.powder.gg, images.powder.gg,
+    pc-releases.powder.gg and pc-prereleases.powder.gg. All four are NXDOMAIN as of
+    this probe (verified against 1.1.1.1 and 8.8.8.8), so no contract can be fetched
+    from them. Recorded as a historical lead only — nothing was derived from it.

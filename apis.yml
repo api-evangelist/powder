@@ -1,18 +1,39 @@
 aid: powder
 name: Powder
-description: 'Powder is a company surfaced as a portfolio company of serena and added to the API Evangelist
-  network as a stub for enrichment. Sector: gaming. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Powder was a Paris-based gaming company, founded in 2018 and backed by a $14M Series A led by
+  Serena with General Catalyst, Slow Ventures, Alven, Bpifrance Digital Venture and Secocha
+  Ventures. It built AI-powered clipping software for gamers and content creators: a low-resource
+  Windows screen recorder plus on-device machine learning that detected highlight moments in
+  gameplay recordings and long Twitch, YouTube and Kick streams and turned them into short
+  vertical clips, AutoEdits and automontages, with per-title models for 40-plus games including
+  Fortnite, Valorant, Counter-Strike 2 and League of Legends, and NPU-accelerated local inference
+  on AMD XDNA hardware. It was distributed as an end-user desktop app through Steam, the Microsoft
+  Store and Razer Cortex, on a free tier with a $9.99/month Powder Pro subscription. Powder
+  published no public API, developer portal, SDK or machine-readable contract. The company has
+  since wound down: its own apex domain now redirects every path to a first-party notice stating
+  the app is no longer updated or maintained and that all subscriptions have been cancelled.
 url: https://raw.githubusercontent.com/api-evangelist/powder/refs/heads/main/apis.yml
+image: https://www.powder.gg/_next/static/media/og.fecfbdd8.jpg
 x-type: company
 x-source: serena-portfolio
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: discontinued
+x-status-source: https://docs.google.com/document/d/1p8TjN7bCRdOnhrD5DjG02pmoGi4ylsGKmdCS-YV4jrg/edit
 specificationVersion: '0.20'
 created: '2026-08-17'
 modified: '2026-08-17'
 tags:
 - Company
 - Gaming
+- Video
+- Artificial Intelligence
+- Content Creation
+- Streaming
+- Media
+- Desktop Application
+- Discontinued
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,5 +41,39 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/powder-domain-security.yml
 - type: Website
-  url: https://powder.gg/
+  url: https://www.powder.gg/
+- type: Lifecycle
+  name: Product lifecycle and end-of-life notice
+  url: lifecycle/powder-lifecycle.yml
+- type: TermsOfService
+  name: Terms & Conditions and Privacy Policy
+  url: https://powderapp.notion.site/POWDER-T-C-fb5f1576921f4ec9a7fb9d243786ace3
+- type: PrivacyPolicy
+  name: Terms & Conditions and Privacy Policy (combined document)
+  url: https://powderapp.notion.site/POWDER-T-C-fb5f1576921f4ec9a7fb9d243786ace3
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Powder shipped only a consumer Windows desktop clipping app with no public API,
+    portal or SDK, and the company has since wound down — its apex host powder.gg now
+    301-redirects every path, including /openapi.json and every /.well-known/ path, to a
+    first-party notice saying the app is no longer updated or maintained.
+  evidence:
+    - url: https://powder.gg/openapi.json
+      status: 301
+    - url: https://docs.google.com/document/d/1p8TjN7bCRdOnhrD5DjG02pmoGi4ylsGKmdCS-YV4jrg/export?format=txt
+      status: 200
+    - url: https://www.powder.gg/.well-known/agent-card.json
+      status: 404
+    - url: https://www.powder.gg/llms.txt
+      status: 404
+  checked: '2026-08-17'
