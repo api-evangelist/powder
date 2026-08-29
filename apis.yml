@@ -14,6 +14,17 @@ description: >-
   since wound down: its own apex domain now redirects every path to a first-party notice stating
   the app is no longer updated or maintained and that all subscriptions have been cancelled.
 url: https://raw.githubusercontent.com/api-evangelist/powder/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.powder.gg/_next/static/media/og.fecfbdd8.jpg
 x-type: company
 x-source: serena-portfolio
