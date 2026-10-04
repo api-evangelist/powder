@@ -42,7 +42,7 @@ x-type: company
 x-source: serena-portfolio
 x-tier: stub
 x-tier-reason: portfolio-lead
-x-status: discontinued
+x-status: defunct
 x-status-source: https://docs.google.com/document/d/1p8TjN7bCRdOnhrD5DjG02pmoGi4ylsGKmdCS-YV4jrg/edit
 specificationVersion: '0.23'
 created: '2026-08-17'
@@ -57,6 +57,7 @@ tags:
 - Media
 - Desktop Application
 - Discontinued
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
