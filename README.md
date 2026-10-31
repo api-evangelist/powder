@@ -64,24 +64,46 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Powder was a Paris-based gaming company (founded 2018, $14M Series A led by Serena) that built
-AI-powered clipping software for gamers and content creators — a low-resource Windows screen
-recorder plus on-device machine learning that turned gameplay recordings and long Twitch, YouTube
-and Kick streams into short vertical clips, AutoEdits and automontages, with per-title models for
-40-plus games.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-**No public API surface.** Powder was distributed only as an end-user Windows desktop application
-(Steam, Microsoft Store, Razer Cortex). It published no public API, developer portal, SDK, webhook
-catalogue or machine-readable contract that this profile could find.
+Powder was a Paris-based gaming company, founded in 2018 and backed by a $14M Series A led by Serena with General Catalyst, Slow Ventures, Alven, Bpifrance Digital Venture and Secocha Ventures. It built AI-powered clipping software for gamers and content creators: a low-resource Windows screen recorder plus on-device machine learning that detected highlight moments in gameplay recordings and long Twitch, YouTube and Kick streams and turned them into short vertical clips, AutoEdits and automontages, with per-title models for 40-plus games including Fortnite, Valorant, Counter-Strike 2 and League of Legends, and NPU-accelerated local inference on AMD XDNA hardware. It was distributed as an end-user desktop app through Steam, the Microsoft Store and Razer Cortex, on a free tier with a $9.99/month Powder Pro subscription. Powder published no public API, developer portal, SDK or machine-readable contract. The company has since wound down: its own apex domain now redirects every path to a first-party notice stating the app is no longer updated or maintained and that all subscriptions have been cancelled.
 
-**Discontinued.** The apex host `powder.gg` now 301-redirects every path — including
-`/openapi.json` and every `/.well-known/` path — to a first-party notice from the Powder team
-stating that "the Powder app will no longer be updated or maintained" and that all subscriptions
-have been cancelled. The notice is saved verbatim at
-[`lifecycle/powder-end-of-life-notice.txt`](lifecycle/powder-end-of-life-notice.txt) and the
-lifecycle record, with the probe evidence, is at
-[`lifecycle/powder-lifecycle.yml`](lifecycle/powder-lifecycle.yml). The `www.powder.gg` marketing
-site is still live but stale — it continues to advertise a subscription the notice says was
-cancelled.
+**Areas:** Company · Gaming · Video · Artificial Intelligence · Content Creation · Streaming · Media · Desktop Application · Discontinued · Defunct
 
-Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.powder.gg/
+## Powder on APIs.io (historical record)
+
+Everything profiled for Powder is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/powder/](https://apis.io/providers/powder/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Powder Domain Security](https://apis.io/security/powder/powder-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.powder.gg/)
+- [Terms of service](https://powderapp.notion.site/POWDER-T-C-fb5f1576921f4ec9a7fb9d243786ace3)
+- [Privacy policy](https://powderapp.notion.site/POWDER-T-C-fb5f1576921f4ec9a7fb9d243786ace3)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Powder: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/powder/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
